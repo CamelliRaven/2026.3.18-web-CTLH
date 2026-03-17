@@ -1,5 +1,3 @@
-// js/project-detail.js
-
 // 项目数据（
 const projects = [
     {

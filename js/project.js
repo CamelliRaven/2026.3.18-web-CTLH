@@ -1,5 +1,3 @@
-// js/project.js
-
 // 项目数据（12 条，每页 6 个）
 const projects = [
     // 第一页

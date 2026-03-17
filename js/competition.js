@@ -1,5 +1,3 @@
-// js/competition.js
-
 // 比赛数据（20 条）
 const competitions = [
     {

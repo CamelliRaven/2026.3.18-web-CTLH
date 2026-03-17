@@ -1,4 +1,3 @@
-
 // 滚动动画 - 资源列表淡入
 document.addEventListener('DOMContentLoaded', function() {
     const resourceSection = document.getElementById('resourceList');

@@ -66,10 +66,10 @@ footer {
         #e3f2fd,  /* 淡蓝 */
         #f5faff   /* 近白 */
     );
-    background-size: 400% 400%;  /* 放大背景以实现流动效果 */
+    background-size: 400% 400%;  
     animation: bgAnimation 8s ease infinite;
     position: relative;
-    overflow: hidden;  /* 防止流光溢出 */
+    overflow: hidden;  
 }
 
 /* 添加流光 overlay 增强效果 */

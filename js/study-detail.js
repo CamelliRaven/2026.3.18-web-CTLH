@@ -1,4 +1,3 @@
-// js/study-detail.js
 const resourceData = {
     1: {
         id: 1,
