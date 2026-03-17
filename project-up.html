@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目上传 - 创途领航</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/project.css">
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm">
+        <div class="container">
+            <a href="index.html" class="navbar-brand fw-bold">
+                <img src="/images/logo.png" alt="logo" class="me-2" style="width: 32px; height: 32px; object-fit: contain;">
+                创途领航
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="study.html">学习资源</a></li>
+                    <li class="nav-item"><a class="nav-link" href="competition.html">资讯广场</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="project.html">项目浏览</a></li>
+                    <li class="nav-item"><a class="nav-link " href="personal.html">个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <h1 class="fw-bold">项目上传</h1>
+            <p class="text-muted">分享你的优秀项目，与社区共同成长</p>
+        </div>
+    </section>
+
+    <!-- 上传表单 -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="uploadForm" class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            
+                            <!-- 项目名称 -->
+                            <div class="mb-4">
+                                <label for="projectName" class="form-label fw-bold">项目名称 <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="projectName" placeholder="请输入项目名称" required>
+                            </div>
+
+                            <!-- 项目分类 -->
+                            <div class="mb-4">
+                                <label for="projectCategory" class="form-label fw-bold">项目分类 <span class="text-danger">*</span></label>
+                                <select class="form-select" id="projectCategory" required>
+                                    <option value="">请选择分类</option>
+                                    <option value="web">Web 开发</option>
+                                    <option value="mobile">移动应用</option>
+                                    <option value="ai">人工智能</option>
+                                    <option value="data">数据分析</option>
+                                </select>
+                            </div>
+
+                            <!-- 技术栈 -->
+                            <div class="mb-4">
+                                <label for="techStack" class="form-label fw-bold">技术栈</label>
+                                <input type="text" class="form-control" id="techStack" placeholder="例如：Vue3, Node.js, MongoDB（用逗号分隔）">
+                                <div class="form-text">多个技术请用逗号分隔</div>
+                            </div>
+
+                            <!-- 项目简介 -->
+                            <div class="mb-4">
+                                <label for="projectDesc" class="form-label fw-bold">项目简介 <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="projectDesc" rows="4" placeholder="请简要描述项目功能和特点" required></textarea>
+                            </div>
+
+                            <!-- 预期成果 -->
+                            <div class="mb-4">
+                                <label for="expectedResults" class="form-label fw-bold">预期成果</label>
+                                <textarea class="form-control" id="expectedResults" rows="4" placeholder="请描述项目预期完成的功能和目标"></textarea>
+                            </div>
+
+                            <!-- 项目书上传 -->
+                            <div class="mb-4">
+                                <label for="projectFile" class="form-label fw-bold">项目计划书</label>
+                                <input class="form-control" type="file" id="projectFile" accept=".pdf,.doc,.docx">
+                                <div class="form-text">仅支持 PDF格式</div>
+                            </div>
+
+                            <!-- 开发周期 -->
+                            <div class="mb-4">
+                                <label for="developmentCycle" class="form-label fw-bold">预计开发周期</label>
+                                <select class="form-select" id="developmentCycle">
+                                    <option value="">请选择</option>
+                                    <option value="1">1 个月</option>
+                                    <option value="2">2 个月</option>
+                                    <option value="3">3 个月</option>
+                                    <option value="6">6 个月</option>
+                                    <option value="12">6 个月以上</option>
+                                </select>
+                            </div>
+
+                            <!-- 团队成员 -->
+                            <div class="mb-4">
+                                <label for="teamSize" class="form-label fw-bold">团队成员数量</label>
+                                <input type="number" class="form-control" id="teamSize" placeholder="请输入团队人数" min="1" max="50">
+                            </div>
+
+                            <!-- 提交按钮 -->
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a href="project.html" class="btn btn-outline-secondary">取消</a>
+                                <button type="submit" class="btn btn-primary px-4">提交项目</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white-50 text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 创途领航。保留所有权利。</p>
+            <p class="small">联系我们 | 隐私政策 | 服务条款</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

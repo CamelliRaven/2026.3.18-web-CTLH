@@ -1,0 +1,131 @@
+/* css/study.css */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.bg-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/index 背景.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.navbar {
+    background-color: rgba(0,0,0,0.6) !important;
+    backdrop-filter: blur(5px);
+}
+
+.content-section {
+    position: relative;
+    z-index: 1;
+    padding: 24px 0;
+}
+
+/* 轮播图区域  */
+.carousel-section {
+    padding: 2rem 0;
+}
+
+.carousel-inner {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* 控制按钮样式 */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 1rem;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* 资源列表滚动动画 */
+.resource-list-section {
+    position: relative;
+    z-index: 1;
+    padding: 3rem 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.resource-list-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.study-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.study-card.card-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.study-icon {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.study-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #e3f2fd;
+    color: #0d6efd;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 页脚 */
+footer {
+    margin-top: auto;
+}

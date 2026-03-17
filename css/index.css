@@ -1,0 +1,114 @@
+/* css/index.css */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: rgba(0,0,0,0.6) !important;
+    backdrop-filter: blur(5px);
+}
+
+.bg-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/index背景.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.content-section {
+    position: relative;
+    z-index: 1;
+}
+
+/* 主图区域 */
+.hero-gradient {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+/* 功能卡片 */
+#features.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#features.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 页脚 */
+footer {
+    margin-top: auto;
+}
+
+
+
+
+
+.hero-gradient{ 
+    /* 淡蓝色系渐变 - 多角度混合 */
+    background: linear-gradient(
+        -45deg, 
+        #e3f2fd,  /* 淡蓝 */
+        #bbdefb,  /* 浅蓝 */
+        #90caf9,  /* 天蓝 */
+        #e3f2fd,  /* 淡蓝 */
+        #f5faff   /* 近白 */
+    );
+    background-size: 400% 400%;  /* 放大背景以实现流动效果 */
+    animation: bgAnimation 8s ease infinite;
+    position: relative;
+    overflow: hidden;  /* 防止流光溢出 */
+}
+
+/* 添加流光 overlay 增强效果 */
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(135, 206, 250, 0.15) 40%,
+        rgba(135, 206, 250, 0.15) 60%,
+        transparent 70%
+    );
+    animation: shine 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes bgAnimation{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/* 流光动画 */
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}

@@ -1,0 +1,126 @@
+/* 订阅按钮 */
+#subscribeBtn {
+    transition: all 0.3s ease;
+}
+
+#subscribeBtn:hover {
+    transform: translateY(-2px);
+}
+
+/* 比赛卡片 */
+.competition-card {
+    border: none;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.08);
+}
+
+.competition-card .card-title {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.competition-card .badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+}
+
+/* 通知列表 */
+.notice-list .list-group-item {
+    border: none;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.notice-list .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.notice-list .list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* 热门资讯排行 */
+.hot-list li {
+    transition: all 0.2s ease;
+    padding: 0.5rem 0;
+}
+
+.hot-list li:hover {
+    transform: translateX(5px);
+}
+
+.hot-list li:not(:last-child) {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.hot-list .badge {
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 筛选区域 */
+.input-group .form-control {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* 分页样式优化 */
+.pagination .page-link {
+    color: #0d6efd;
+    border: 1px solid #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+}
+
+/* 查看更多按钮 */
+#toggleNoticeBtn {
+    min-width: 150px;
+    transition: all 0.3s ease;
+}
+
+#toggleNoticeBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .page-header .d-flex {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .page-header .btn {
+        width: 100%;
+    }
+    
+    .competition-card .d-flex {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .pagination .page-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+    }
+}

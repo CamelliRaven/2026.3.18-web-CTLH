@@ -1,0 +1,38 @@
+/* css/study-detail.css */
+
+.video-item, .document-item {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.video-item:hover, .document-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+}
+
+/* 资料列表最大高度，可滚动 */
+#videoList, #documentList {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* 自定义滚动条样式 */
+#videoList::-webkit-scrollbar,
+#documentList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#videoList::-webkit-scrollbar-thumb,
+#documentList::-webkit-scrollbar-thumb {
+    background-color: #0d6efd;
+    border-radius: 3px;
+}
+
+#videoList::-webkit-scrollbar-track,
+#documentList::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
